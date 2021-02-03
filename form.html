@@ -1,0 +1,84 @@
+<head>
+   <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+   <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+   <script src="cropanduploadscript.js"></script>
+</head>
+<body>
+	
+	<input accept="image/*" onchange="readURL1(this);" type="file" id="filesx" name="frontal" />
+	<label id="uploadlabel1" class=" px-4 py-2 text-white mb-2 w-100 text-center mx-auto"
+		for="filesx">Upload Frontal view</label>
+	<br>
+	<input accept="image/*" onchange="readURL2(this);" type="file" id="filesx2"
+		name="vertex" />
+	<label id="uploadlabel2" class=" px-4 py-2 text-white mb-2 w-100 text-center" for="filesx2">Upload
+		Vertex view</label>
+	<br>
+	<input accept="image/*" onchange="readURL3(this);" type="file" id="filesx3"
+		name="parietal" />
+	<label id="uploadlabel3" class=" px-4 py-2 text-white mb-2 w-100 text-center" for="filesx3">Upload
+		Parietal view</label>
+	<br>
+	<input accept="image/*" onchange="readURL4(this);" type="file" id="filesx4"
+		name="occiput" />
+	<label id="uploadlabel4" class=" px-4 py-2 text-white mb-2 w-100 text-center" for="filesx4">Upload
+		Occipital view</label>
+	<img id="blah"  src="#" style="display: none;" />
+	<img id="blah2"  src="#" style="display: none;" />
+	<img id="blah3"  src="#" style="display: none;" />
+	<img id="blah4"  src="#" style="display: none;" />
+	<canvas onchange="console.log(this)" id="myCanvas1" title="" style="display: none;"></canvas>
+	<canvas onchange="console.log(this)" id="myCanvas2" title="" style="display: none;"></canvas>
+	<canvas onchange="console.log(this)" id="myCanvas3" title="" style="display: none;"></canvas>
+	<canvas onchange="console.log(this)" id="myCanvas4" title="" style="display: none;"></canvas>
+	<canvas onchange="console.log(this)" id="myCanvas5" title="" style="display: none;"></canvas>
+	<canvas onchange="console.log(this)" id="myCanvas6" title="" style="display: none;"></canvas>
+	<canvas onchange="console.log(this)" id="myCanvas7" title="" style="display: none;"></canvas>
+	<canvas onchange="console.log(this)" id="myCanvas8" title="" style="display: none;"></canvas>
+	<canvas onchange="console.log(this)" id="myCanvas9" title="" style="display: none;"></canvas>
+<form id="form_object" class="form " action="" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+              <input class="px-3 mb-2" hidden value="{{user.doctor.name}}" class="input" id="input1" name="dr_name"
+                placeholder="Name" type="text">
+              <input class="px-3 mb-2" hidden value="{{user.doctor.license_number}}" class="input" id="input1"
+                name="dr_license" placeholder="Name" type="text">
+              <input class="px-3 mb-2" hidden value="{{user.doctor.clinic_name}}" class="input" id="input1"
+                name="clinic_name" placeholder="Name" type="text">
+              <input class="px-3 mb-2" required class="input" id="input1" name="name" placeholder="First Name"
+                type="text">
+              <input class="px-3 mb-2" required class="input" id="input1" name="last" placeholder="Last Name"
+                type="text">
+              <input class="px-3 mb-2" value="9999999999" class="input" id="input1" name="mobile" placeholder="Mobile"
+                type="text">
+
+              <!-- <input value="Female" class="input" id="sex" name="sex" placeholder="Sex" type="text"> -->
+              <select class="px-3 mb-2" required id="input1" name="sex">
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+              </select>
+
+
+              <input class="px-3 mb-2" class="input" id="input1" name="registration_number"
+                placeholder="Registration Number" type="text" required>
+              <input class="px-3 mb-2" value="History" class="input" id="input1" name="history"
+                placeholder="History Number" type="text">
+              <input class="px-3 mb-2" required class="input" id="input1" name="age" placeholder="Age (years)"
+                type="text">
+              <input class="px-3 mb-2" value="{{user.doctor.pixel_size}}" class="input" id="input1" name="pixel_size"
+                placeholder="0.00239" type="text">
+              <div class=" mx-auto">
+                <br>
+                
+              </div>
+
+              <br />
+              <div align="center">
+                <input class="btn btn-dark px-5 mx-auto" type="button" value="Submit" id="buttin" onclick="ajaxquery();" />
+              </div>
+			
+              <hr />
+		  </form>
+		</body>		  
+
+
+
